@@ -13,11 +13,7 @@ export default function Template({ data }) {
         <hr />
         <h1>{post.frontmatter.name}</h1>
         <h3>{post.frontmatter.note}</h3>
-        <Img
-          resolutions={
-            post.frontmatter.featuredImage.childImageSharp.resolutions
-          }
-        />
+        <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
         <h4>Posted on {post.frontmatter.date}</h4>
         <hr />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -35,10 +31,10 @@ export const postQuery = graphql`
         note
         date
         path
-        featuredImage {
+        image {
           childImageSharp {
-            resolutions(width: 300, height: 300) {
-              ...GatsbyImageSharpResolutions
+            fluid(maxWidth: 750) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

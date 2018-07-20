@@ -9,19 +9,18 @@ const AdoptableCatsPage = ({ data }) => {
       <Layout>
         <h1>Adoptable Cats Page</h1>
         <h2>--Add Adoption Form--</h2>
-        {data.allMarkdownRemark.edges.map(cat => (
+        {data.allMarkdownRemark.edges.map((cat) => (
           <div key={cat.node.id}>
-            <h2>{cat.node.frontmatter.name}</h2>
+            <h2>
+              <Link to={cat.node.frontmatter.path}>
+                {cat.node.frontmatter.name}
+              </Link>
+            </h2>
             <h4>{cat.node.frontmatter.note}</h4>
-            <Img
-              resolutions={
-                cat.node.frontmatter.featuredImage.childImageSharp.resolutions
-              }
-            />
+            <Link to={cat.node.frontmatter.path}>
+              <Img fixed={cat.node.frontmatter.image.childImageSharp.fixed} />
+            </Link>
             <small>Posted on {cat.node.frontmatter.date}</small>
-            <br />
-            <br />
-            <Link to={cat.node.frontmatter.path}>Read More</Link>
             <br />
             <br />
             <hr />
@@ -43,10 +42,10 @@ export const pageQuery = graphql`
             note
             date(formatString: "DD MMMM, YYYY")
             path
-            featuredImage {
+            image {
               childImageSharp {
-                resolutions(width: 300, height: 300) {
-                  ...GatsbyImageSharpResolutions
+                fixed(width: 500) {
+                  ...GatsbyImageSharpFixed
                 }
               }
             }
