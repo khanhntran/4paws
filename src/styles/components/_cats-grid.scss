@@ -1,0 +1,6 @@
+.cat-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: $l-size;
+  margin-bottom: $xl-size;
+}

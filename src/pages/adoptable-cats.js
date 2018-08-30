@@ -3,12 +3,22 @@ import Layout from '../components/Layout';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-const AdoptableCatsPage = ({ data }) => {
-  return (
-    <div>
-      <Layout>
-        <h1>Adoptable Cats Page</h1>
-        <h2>--Add Adoption Form--</h2>
+const AdoptableCatsPage = ({ data }) => (
+  <div>
+    <Layout>
+      <h1>Adoptable Cats Page</h1>
+      <p>
+        If you are interested in adopting any 4Paws cat, please{' '}
+        <a
+          href="/files/adoption-application.pdf"
+          download="adoption-application.pdf"
+        >
+          download the adoption application
+        </a>{' '}
+        and fax it to 703-560-9795.
+      </p>
+      <hr />
+      <div className="cat-wrapper">
         {data.allMarkdownRemark.edges.map((cat) => (
           <div key={cat.node.id}>
             <h2>
@@ -18,33 +28,36 @@ const AdoptableCatsPage = ({ data }) => {
             </h2>
             <h4>{cat.node.frontmatter.note}</h4>
             <Link to={cat.node.frontmatter.path}>
-              <Img fixed={cat.node.frontmatter.image.childImageSharp.fixed} />
+              <Img
+                outerWrapperClassName="cat-outer-wrapper"
+                fixed={cat.node.frontmatter.image.childImageSharp.fixed}
+              />
             </Link>
-            <small>Posted on {cat.node.frontmatter.date}</small>
             <br />
-            <br />
-            <hr />
+            <small>
+              Posted on <strong>{cat.node.frontmatter.date}</strong>
+            </small>
           </div>
         ))}
-      </Layout>
-    </div>
-  );
-};
+      </div>
+    </Layout>
+  </div>
+);
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
       edges {
         node {
           id
           frontmatter {
             name
             note
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             path
             image {
               childImageSharp {
-                fixed(width: 500) {
+                fixed(width: 250) {
                   ...GatsbyImageSharpFixed
                 }
               }

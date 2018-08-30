@@ -1,0 +1,15 @@
+.nav-container {
+  background: $light-grey;
+  padding: $xs-size 0;
+}
+.nav-list {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.nav-list__item {
+  font-size: $font-size-large;
+  text-decoration: none;
+}

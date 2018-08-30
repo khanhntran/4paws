@@ -12,7 +12,7 @@ export default function Template({ data }) {
         <Link to="/adoptable-cats">Go Back</Link>
         <hr />
         <h1>{post.frontmatter.name}</h1>
-        <h3>{post.frontmatter.note}</h3>
+        <h3>{post.frontmatter.subtitle}</h3>
         <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
         <h4>Posted on {post.frontmatter.date}</h4>
         <hr />
@@ -28,8 +28,8 @@ export const postQuery = graphql`
       html
       frontmatter {
         name
-        note
-        date
+        subtitle
+        date(formatString: "MMMM DD, YYYY")
         path
         image {
           childImageSharp {

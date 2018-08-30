@@ -1,37 +1,38 @@
-import React from "react";
-import Link from "gatsby-link";
+import React from 'react';
+import Link from 'gatsby-link';
 
 const NavigationMenu = () => (
-  <div
-    style={{
-      background: "#f4f4f4",
-      paddingTop: "10px"
-    }}
-  >
-    <ul
-      style={{
-        listStyle: "none",
-        display: "flex",
-        justifyContent: "space-evenly"
-      }}
-    >
+  <div className="nav-container">
+    <ul className="nav-list">
       <li>
-        <Link to="/">Home</Link>
+        <Link className="nav-list__item" to="/">
+          Home
+        </Link>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Link className="nav-list__item" to="/about">
+          About
+        </Link>
       </li>
       <li>
-        <Link to="/adoptable-cats">Adoptable Cats</Link>
+        <Link className="nav-list__item" to="/adoptable-cats">
+          Adoptable Cats
+        </Link>
       </li>
       <li>
-        <Link to="/resources">Resources</Link>
+        <Link className="nav-list__item" to="/resources">
+          Resources
+        </Link>
       </li>
       <li>
-        <Link to="/support-us">Support Us</Link>
+        <Link className="nav-list__item" to="/support-us">
+          Support Us
+        </Link>
       </li>
       <li>
-        <Link to="/contact">Contact</Link>
+        <Link className="nav-list__item" to="/contact">
+          Contact
+        </Link>
       </li>
     </ul>
   </div>
