@@ -9,11 +9,10 @@ const ResourcesPage = () => (
     <h3>Have each one as its own MD</h3>
     <ul>
       <li>Adoption form</li>
-      <li><Link to="/resource-pages/ready-to-adopt-info">Information on owning a cat</Link></li>
-      <li><Link to="/resource-pages/spay-neuter-info">Why to spay/neuter</Link></li>
-      <li>Why you shouldn't declaw</li>
-      <li>Introucing Cats</li>
-      <li><Link to="/resource-pages/fiv-felv-info">Facts about FIV and FELV</Link></li>
+      <li><Link to="/resource-pages/ready-to-adopt-resource">Information on owning a cat</Link></li>
+      <li><Link to="/resource-pages/spay-neuter-resource">Why to spay/neuter</Link></li>
+      <li><Link to="/resource-pages/introducing-cats-resource">Introducing Cats</Link></li>
+      <li><Link to="/resource-pages/fiv-felv-resource">Facts about FIV and FELV</Link></li>
     </ul>
   </Layout>
 );
