@@ -13,6 +13,7 @@ const ResourcesPage = () => (
       <li><Link to="/resource-pages/spay-neuter-resource">Why to spay/neuter</Link></li>
       <li><Link to="/resource-pages/introducing-cats-resource">Introducing Cats</Link></li>
       <li><Link to="/resource-pages/fiv-felv-resource">Facts about FIV and FELV</Link></li>
+      <li><Link to="/resource-pages/adoption-locations">Adoption Locations</Link></li>
     </ul>
   </Layout>
 );
