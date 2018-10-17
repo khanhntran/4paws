@@ -1,11 +1,12 @@
 .header {
-  background: #3664d1;
+  background: #ffffff;
   margin-bottom: 0 auto;
-  padding: $l-size;
+  padding: $s-size;
 }
 
 .header__content {
-  color: white;
+  margin-left: 5rem;
+  color: $fourpaws-blue;
   text-decoration: none;
 }
 
