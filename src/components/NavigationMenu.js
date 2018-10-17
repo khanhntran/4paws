@@ -6,32 +6,32 @@ const NavigationMenu = () => (
     <ul className="nav-list">
       <li>
         <Link className="nav-list__item" to="/">
-          Home
+          HOME
         </Link>
       </li>
       <li>
         <Link className="nav-list__item" to="/about">
-          About
+          ABOUT
         </Link>
       </li>
       <li>
         <Link className="nav-list__item" to="/adoptable-cats">
-          Adoptable Cats
+          ADOPT A CAT
         </Link>
       </li>
       <li>
         <Link className="nav-list__item" to="/resources">
-          Resources
+          RESOURCES
         </Link>
       </li>
       <li>
         <Link className="nav-list__item" to="/support-us">
-          Support Us
+          SUPPORT US
         </Link>
       </li>
       <li>
         <Link className="nav-list__item" to="/contact">
-          Contact
+          CONTACT
         </Link>
       </li>
     </ul>
