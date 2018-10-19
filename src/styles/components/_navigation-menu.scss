@@ -1,5 +1,6 @@
 .nav-container {
   background: $fourpaws-blue;
+  height: 8rem;
   padding: $xs-size 0;
 }
 .nav-list {
@@ -10,7 +11,7 @@
 }
 
 .nav-list__item {
+  color: #ffffff;
   font-size: $font-size-xl;
   text-decoration: none;
-  color: #ffffff;
 }

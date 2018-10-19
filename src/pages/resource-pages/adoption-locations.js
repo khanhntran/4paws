@@ -4,7 +4,7 @@ import Layout from '../../components/Layout';
 const AdoptionLocationsPage = () => (
   <Layout>
 
-  <h1>Adoption Locations</h1>
+  <h1 class='problem-h1'>Adoption Locations</h1>
 
   <h2>Adoption Fair Dates and Locations</h2>
 

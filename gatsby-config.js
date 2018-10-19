@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: '4Paws Rescue Team'
+    title: '4Paws Rescue Team',
+    footer: 'Copyright © 2018 | 4Paws Rescue Team'
   },
   plugins: [
     'gatsby-plugin-react-helmet',

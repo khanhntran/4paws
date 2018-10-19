@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 const IndexPage = () => (
   <Layout>
-    <h1>Home Page</h1>
+    <h1 class='problem-h1'>Home Page</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque et vitae
       neque rerum ullam dolorem nam consectetur cum labore eveniet, facilis
