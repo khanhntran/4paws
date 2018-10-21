@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 const AboutPage = () => (
   <Layout>
-    <h1>About 4Paws</h1>
+    <h1 class='problem-h1'>About 4Paws</h1>
     <h2>-Add Picture Here-</h2>
     <p>
       The 4Paws Rescue Team is a nonprofit community-based all volunteer

@@ -4,7 +4,7 @@ import Layout from '../../components/Layout';
 const FivFelvResourcePage = () => (
   <Layout>
 
-  <h1>The Facts About FIV & FELV</h1>
+  <h1 class='problem-h1'>The Facts About FIV & FELV</h1>
 
   <h3>Quick Facts About Feline Immunodeficiency Virus (FIV)</h3>
 

@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
 import Header from './Header';
+import Footer from './Footer';
 import 'normalize.css/normalize.css';
 import '../styles/styles.scss';
 import NavigationMenu from './NavigationMenu';
@@ -15,6 +16,7 @@ const Layout = ({ children, data }) => (
         site {
           siteMetadata {
             title
+            footer
           }
         }
       }
@@ -31,7 +33,8 @@ const Layout = ({ children, data }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <NavigationMenu />
         <div className="content-container">{children}</div>
-      </>
+        <Footer footerText={data.site.siteMetadata.footer}/>
+        </>
     )}
   />
 );

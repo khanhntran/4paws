@@ -1,4 +1,7 @@
 .content-container {
   margin: 0 auto;
   max-width: 80rem;
+  min-height: calc(100vh - 21rem);
+  overflow: hidden;
+  padding: 5rem 0;
 }

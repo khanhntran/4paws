@@ -5,7 +5,7 @@ const ContactPage = () => {
   return (
     <div>
       <Layout>
-        <h1>Contact Us</h1>
+        <h1 class='problem-h1'>Contact Us</h1>
         <p>
           <b>4Paws Rescue Team</b><br></br>
           P.O. Box 2908<br></br>
