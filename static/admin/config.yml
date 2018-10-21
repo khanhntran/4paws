@@ -1,0 +1,37 @@
+backend:
+  name: test-repo
+  #name: 4paws
+  #repo: khanhntran/4paws
+  # accept_roles:
+  #   - admin
+  #   - editor
+
+media_folder: static/assets
+public_folder: assets
+
+display_url: fourpaws.org
+
+collections:
+  - name: cat
+    label: Cats
+    label_singular: cat
+    description: List of all available cats for adoption
+    folder: 'src/pages/cats'
+    create: true
+    fields:
+      - { name: title, label: Cat's Name, widget: string }
+      - { name: date, label: Date, widget: date }
+      - { name: shortDesc, label: Short Description, widget: string }
+      - { name: picture, label: Picture, widget: image }
+      - { name: bio, label: Full Bio, widget: markdown }
+      - { name: tags, label: Tags, widget: list }
+  - name: resource
+    label: Resources
+    label_singular: resource
+    description: List of all existing resources
+    folder: 'src/pages/resource-pages'
+    create: true
+    fields:
+      - { name: title, label: Resource Title, widget: string }
+      - { name: picture, label: Picture, widget: image, required: false }
+      - { name: body, label: Body, widget: markdown }
