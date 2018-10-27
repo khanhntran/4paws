@@ -2,9 +2,9 @@ backend:
   name: test-repo
   #name: 4paws
   #repo: khanhntran/4paws
-  # accept_roles:
-  #   - admin
-  #   - editor
+  accept_roles:
+    - admin
+    - editor
 
 media_folder: static/assets
 public_folder: assets
