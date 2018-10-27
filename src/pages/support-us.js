@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 
 const SupportUsPage = () => (
   <Layout>
-    <h1 class='problem-h1'>Support Us Page</h1>
+    <h1 className='h1--no-margin'>Support Us Page</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt iste
       officia cumque ut minus magnam non doloribus fuga illum expedita repellat

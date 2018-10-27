@@ -6,7 +6,7 @@ import Img from 'gatsby-image';
 const AdoptableCatsPage = ({ data }) => (
   <div>
     <Layout>
-      <h1 class='problem-h1'>Adoptable Cats Page</h1>
+      <h1 className='h1--no-margin'>Adoptable Cats Page</h1>
       <p>
         If you are interested in adopting any 4Paws cat, please{' '}
         <a

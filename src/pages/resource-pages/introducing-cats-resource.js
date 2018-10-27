@@ -3,7 +3,7 @@ import Layout from '../../components/Layout';
 
 const IntroducingCatsResourcePage = () => (
   <Layout>
-    <h1 class='problem-h1'>Introducing Cats</h1>
+    <h1 className='h1--no-margin'>Introducing Cats</h1>
 
     <h2>I Have Other Pets In My Home</h2>
 

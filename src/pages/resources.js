@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 const ResourcesPage = () => (
   <Layout>
-    <h1 class='problem-h1'>Resources Page</h1>
+    <h1 className='h1--no-margin'>Resources Page</h1>
     <h2>To Do:</h2>
     <h3>Have each one as its own MD</h3>
     <ul>

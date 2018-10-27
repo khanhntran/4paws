@@ -1,24 +1,16 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import IndexLayout from '../components/IndexLayout';
 
 const IndexPage = () => (
-  <Layout>
-    <h1 class='problem-h1'>Home Page</h1>
+  <IndexLayout>
+    <h1 className='h1--no-margin'>Planning to Adopt a Cat?</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque et vitae
       neque rerum ullam dolorem nam consectetur cum labore eveniet, facilis
       repellendus soluta autem reiciendis aut delectus corporis nostrum omnis
       veritatis commodi quia ab deserunt. Hic tenetur modi neque! Totam.
     </p>
-    <h2>To Do:</h2>
-    <ul>
-      <li>Slideshow</li>
-      <li>Adoption Fair</li>
-      <li>Short list of recent additions</li>
-      <li>Small preview of FB feed</li>
-      <li>Small about summary</li>
-    </ul>
-  </Layout>
+  </IndexLayout>
 );
 
 export default IndexPage;

@@ -4,7 +4,7 @@ import Layout from '../../components/Layout';
 const ReadyToAdoptResourcePage = () => (
   <Layout>
 
-    <h1 class='problem-h1'>Are You Ready To Adopt?</h1>
+    <h1 className='h1--no-margin'>Are You Ready To Adopt?</h1>
 
     <p>
     <b>Have you been thinking about adding a cat or two to your family? Wondering if you are ready?</b>
