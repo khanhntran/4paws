@@ -27,7 +27,11 @@ const AdoptableCatsPage = ({ data }) => (
               </Link>
             </h2>
             <Link to={`adoptable-cats/${cat.node.frontmatter.title}`}>
-              <img src={cat.node.frontmatter.picture} />
+              <img
+                className="cat-pic"
+                alt={`${cat.node.frontmatter.title} the cat`}
+                src={cat.node.frontmatter.picture}
+              />
             </Link>
             <h4>{cat.node.frontmatter.shortDesc}</h4>
             <small>
@@ -54,7 +58,7 @@ const AdoptableCatsPage = ({ data }) => (
 //           frontmatter {
 //             name
 //             note
-//             date(formatString: "MMMM DD, YYYY")
+//             date
 //             path
 //             image {
 //               childImageSharp {
@@ -79,8 +83,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             shortDesc
-            date(formatString: "MMMM DD, YYYY")
-            bio
+            date
             picture
           }
         }

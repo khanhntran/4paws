@@ -1,6 +1,6 @@
 ---
 title: Ice
-date: 2018-10-28T04:27:47.925Z
+date: Oct 29th 2018
 shortDesc: A Friendly and Affectionate Boy Looking for a New Home!
 picture: /assets/ice.jpg
 tags:
