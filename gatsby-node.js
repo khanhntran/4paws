@@ -13,9 +13,9 @@ exports.createPages = ({ actions, graphql }) => {
             html
             id
             frontmatter {
-              name
+              title
               date
-              path
+              tags
             }
           }
         }
@@ -27,7 +27,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
-        path: node.frontmatter.path,
+        path: `adoptable-cats/${node.frontmatter.title}`,
         component: postTemplate
       });
     });

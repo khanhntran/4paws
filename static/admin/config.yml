@@ -21,10 +21,10 @@ collections:
     create: true
     fields:
       - { name: title, label: Cat's Name, widget: string }
-      - { name: date, label: Date, widget: date }
+      - { name: date, label: Date, widget: date, format: MMM Do YY }
       - { name: shortDesc, label: Short Description, widget: string }
       - { name: picture, label: Picture, widget: image }
-      - { name: bio, label: Full Bio, widget: markdown }
+      - { name: body, label: Full Bio, widget: markdown }
       - { name: tags, label: Tags, widget: list }
   - name: resource
     label: Resources

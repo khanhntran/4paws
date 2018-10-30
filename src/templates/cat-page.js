@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
-import Img from 'gatsby-image';
+//import Img from 'gatsby-image';
 
 export default function Template({ data }) {
   const post = data.markdownRemark;
@@ -11,9 +11,9 @@ export default function Template({ data }) {
       <Layout>
         <Link to="/adoptable-cats">Go Back</Link>
         <hr />
-        <h1>{post.frontmatter.name}</h1>
-        <h3>{post.frontmatter.subtitle}</h3>
-        <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+        <h1>{post.frontmatter.title}</h1>
+        <h3>{post.frontmatter.shortDesc}</h3>
+        <img src={post.frontmatter.picture} />
         <h4>Posted on {post.frontmatter.date}</h4>
         <hr />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -22,22 +22,39 @@ export default function Template({ data }) {
   );
 }
 
+// <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+
+// export const postQuery = graphql`
+//   query($path: String!) {
+//     markdownRemark(frontmatter: { path: { eq: $path } }) {
+//       html
+//       frontmatter {
+//         name
+//         subtitle
+//         date(formatString: "MMMM DD, YYYY")
+//         path
+//         image {
+//           childImageSharp {
+//             fluid(maxWidth: 750) {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
+
 export const postQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query CatQuery {
+    markdownRemark {
       html
       frontmatter {
-        name
-        subtitle
+        title
+        shortDesc
         date(formatString: "MMMM DD, YYYY")
-        path
-        image {
-          childImageSharp {
-            fluid(maxWidth: 750) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        bio
+        picture
       }
     }
   }
