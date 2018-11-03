@@ -1,12 +1,12 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import { Link, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+//import Img from 'gatsby-image';
 
 const AdoptableCatsPage = ({ data }) => (
   <div>
     <Layout>
-      <h1 className='h1--no-margin'>Adoptable Cats Page</h1>
+      <h1 className="h1--no-margin">Adoptable Cats Page</h1>
       <p>
         If you are interested in adopting any 4Paws cat, please{' '}
         <a
@@ -18,22 +18,22 @@ const AdoptableCatsPage = ({ data }) => (
         and fax it to 703-560-9795.
       </p>
       <hr />
-      <div className="cat-wrapper">
+      <div className="cat-grid">
         {data.allMarkdownRemark.edges.map((cat) => (
-          <div key={cat.node.id}>
+          <div key={cat.node.id} className="cat-grid__item">
             <h2>
-              <Link to={cat.node.frontmatter.path}>
-                {cat.node.frontmatter.name}
+              <Link to={`adoptable-cats/${cat.node.frontmatter.title}`}>
+                {cat.node.frontmatter.title}
               </Link>
             </h2>
-            <h4>{cat.node.frontmatter.note}</h4>
-            <Link to={cat.node.frontmatter.path}>
-              <Img
-                outerWrapperClassName="cat-outer-wrapper"
-                fixed={cat.node.frontmatter.image.childImageSharp.fixed}
+            <Link to={`adoptable-cats/${cat.node.frontmatter.title}`}>
+              <img
+                className="cat-pic"
+                alt={`${cat.node.frontmatter.title} the cat`}
+                src={cat.node.frontmatter.picture}
               />
             </Link>
-            <br />
+            <h4>{cat.node.frontmatter.shortDesc}</h4>
             <small>
               Posted on <strong>{cat.node.frontmatter.date}</strong>
             </small>
@@ -44,6 +44,36 @@ const AdoptableCatsPage = ({ data }) => (
   </div>
 );
 
+// <Img
+//               outerWrapperClassName="cat-outer-wrapper"
+//               fixed={cat.node.frontmatter.image.childImageSharp.fixed}
+//             />
+
+// export const pageQuery = graphql`
+//   query IndexQuery {
+//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             name
+//             note
+//             date
+//             path
+//             image {
+//               childImageSharp {
+//                 fixed(width: 250) {
+//                   ...GatsbyImageSharpFixed
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
+
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
@@ -51,17 +81,10 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
-            name
-            note
-            date(formatString: "MMMM DD, YYYY")
-            path
-            image {
-              childImageSharp {
-                fixed(width: 250) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
+            title
+            shortDesc
+            date
+            picture
           }
         }
       }

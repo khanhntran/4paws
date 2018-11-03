@@ -9,6 +9,13 @@ module.exports = {
     'gatsby-plugin-catch-links',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-netlify-identity-widget',
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -23,6 +30,7 @@ module.exports = {
         path: `${__dirname}/src/pages/cats`
       }
     },
-    'gatsby-transformer-remark'
+    'gatsby-transformer-remark',
+    'gatsby-plugin-netlify'
   ]
 };
