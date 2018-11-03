@@ -1,15 +1,53 @@
 // Widescreens
 @include mediaXl {
+
 }
 
 // Desktops and Laptops
 @include mediaLg {
+
 }
 
 // Tablets and Small Laptops
 @include mediaMd {
+  .header {
+    display: none;
+  }
+
+  nav {
+    .nav-container-wide {
+      display: none;
+    }
+
+    .nav-container-narrow {
+      display: block;
+    }
+  }
+
+  .content-container {
+    padding: 5rem 3rem;
+  }
 }
 
 // Smartphones
 @include mediaSm {
+
+  .header {
+    display: none;
+  }
+
+  nav {
+    .nav-container-wide {
+      display: none;
+    }
+
+    .nav-container-narrow {
+      display: block;
+    }
+  }
+
+  .content-container {
+    padding: 5rem 3rem;
+  }
+
 }
