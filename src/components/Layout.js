@@ -33,8 +33,8 @@ const Layout = ({ children, data }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <NavigationMenu />
         <div className="content-container">{children}</div>
-        <Footer footerText={data.site.siteMetadata.footer}/>
-        </>
+        <Footer footerText={data.site.siteMetadata.footer} />
+      </>
     )}
   />
 );

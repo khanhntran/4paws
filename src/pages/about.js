@@ -3,8 +3,12 @@ import Layout from '../components/Layout';
 
 const AboutPage = () => (
   <Layout>
-    <h1 className='h1--no-margin'>About 4Paws</h1>
-    <h2>-Add Picture Here-</h2>
+    <h1 className="h1--no-margin">About Us</h1>
+    <img
+      id="fourpaws-logo-about"
+      src="/images/4paws_logo_large.png"
+      alt="4Paws Logo"
+    />
     <p>
       The 4Paws Rescue Team is a nonprofit community-based all volunteer
       organization that takes in neglected, abandoned, abused and unwanted cats

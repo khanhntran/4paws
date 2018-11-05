@@ -1,15 +1,21 @@
 // Widescreens
 @include mediaXl {
-
 }
 
 // Desktops and Laptops
 @include mediaLg {
-
 }
 
 // Tablets and Small Laptops
 @include mediaMd {
+  .banner__image {
+    max-width: 100vw;
+  }
+
+  .content-container {
+    padding: 5rem 3rem;
+  }
+
   .header {
     display: none;
   }
@@ -22,15 +28,18 @@
     .nav-container-narrow {
       display: block;
     }
-  }
-
-  .content-container {
-    padding: 5rem 3rem;
   }
 }
 
 // Smartphones
 @include mediaSm {
+  .banner__image {
+    max-width: 100vw;
+  }
+
+  .content-container {
+    padding: 5rem 3rem;
+  }
 
   .header {
     display: none;
@@ -45,9 +54,4 @@
       display: block;
     }
   }
-
-  .content-container {
-    padding: 5rem 3rem;
-  }
-
 }
