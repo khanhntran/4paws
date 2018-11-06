@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: adopt-format
+  branch: demo
   accept_roles:
     - admin
     - editor
