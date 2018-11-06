@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: netlifycms
+  branch: adopt-format
   accept_roles:
     - admin
     - editor

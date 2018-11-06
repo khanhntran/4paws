@@ -5,6 +5,32 @@
   margin-bottom: $xl-size;
 }
 
+.cat-grid a {
+  text-decoration: none;
+  color: black;
+}
+
+.cat-grid__item {
+  border: 2px grey solid;
+  text-decoration: none;
+}
+
+.cat-name {
+  font-size: $font-size-xl;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cat-pic-container {
+  min-height: 15vw;
+}
+
 .cat-pic {
-  width: 250px;
+  width: 15vw;
+  display: block;
+  margin: 0 auto;
+}
+
+.cat-date {
+  text-decoration: none;
 }

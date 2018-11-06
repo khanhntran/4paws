@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
-//import Img from 'gatsby-image';
 
 export default function Template({ data }) {
   const post = data.markdownRemark;
@@ -14,6 +13,7 @@ export default function Template({ data }) {
         <h1>{post.frontmatter.title}</h1>
         <h3>{post.frontmatter.shortDesc}</h3>
         <img
+          className="cat-profile-image"
           alt={`${post.frontmatter.title} the cat`}
           src={post.frontmatter.picture}
         />
@@ -49,8 +49,8 @@ export default function Template({ data }) {
 // `;
 
 export const postQuery = graphql`
-  query CatQuery {
-    markdownRemark {
+  query($title: String!) {
+    markdownRemark(frontmatter: { title: { eq: $title } }) {
       html
       frontmatter {
         title

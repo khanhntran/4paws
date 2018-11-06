@@ -6,7 +6,7 @@ import { Link, graphql } from 'gatsby';
 const AdoptableCatsPage = ({ data }) => (
   <div>
     <Layout>
-      <h1 className="h1--no-margin">Adoptable Cats Page</h1>
+      <h1 className="h1--no-margin">Adoptable Cats</h1>
       <p>
         If you are interested in adopting any 4Paws cat, please{' '}
         <a
@@ -20,24 +20,27 @@ const AdoptableCatsPage = ({ data }) => (
       <hr />
       <div className="cat-grid">
         {data.allMarkdownRemark.edges.map((cat) => (
-          <div key={cat.node.id} className="cat-grid__item">
-            <h2>
-              <Link to={`adoptable-cats/${cat.node.frontmatter.title}`}>
-                {cat.node.frontmatter.title}
-              </Link>
-            </h2>
-            <Link to={`adoptable-cats/${cat.node.frontmatter.title}`}>
-              <img
-                className="cat-pic"
-                alt={`${cat.node.frontmatter.title} the cat`}
-                src={cat.node.frontmatter.picture}
-              />
-            </Link>
-            <h4>{cat.node.frontmatter.shortDesc}</h4>
-            <small>
-              Posted on <strong>{cat.node.frontmatter.date}</strong>
-            </small>
-          </div>
+          <Link
+            key={cat.node.id}
+            to={`adoptable-cats/${cat.node.frontmatter.title}`}
+          >
+            <div key={cat.node.id} className="cat-grid__item">
+              <div className="cat-name">{cat.node.frontmatter.title}</div>
+              <div className="cat-pic-container">
+                <img
+                  className="cat-pic"
+                  alt={`${cat.node.frontmatter.title} the cat`}
+                  src={cat.node.frontmatter.picture}
+                />
+              </div>
+              <div className="cat-short-desc">
+                {cat.node.frontmatter.shortDesc}
+              </div>
+              <div className="cat-date">
+                Posted on <strong>{cat.node.frontmatter.date}</strong>
+              </div>
+            </div>
+          </Link>
         ))}
       </div>
     </Layout>
@@ -75,7 +78,7 @@ const AdoptableCatsPage = ({ data }) => (
 // `;
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query CatsQuery {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }) {
       edges {
         node {
