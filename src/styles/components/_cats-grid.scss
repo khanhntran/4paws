@@ -1,6 +1,6 @@
 .cat-grid {
   display: grid;
-  grid-column-gap: $l-size;
+  grid-column-gap: $s-size;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: $xl-size;
 }
@@ -12,6 +12,7 @@
 
 .cat-grid__item {
   border: 2px grey solid;
+  padding: 1rem;
   text-decoration: none;
 }
 
@@ -22,13 +23,21 @@
 }
 
 .cat-pic-container {
-  min-height: 15vw;
+  min-height: 20rem;
+  position: relative;
 }
 
 .cat-pic {
-  width: 15vw;
+  width: 20rem;
+
   display: block;
   margin: 0 auto;
+
+  position: absolute;
+  clip: rect(0rem, 20rem, 20rem, 0rem);
+
+  left: 0;
+  right: 0;
 }
 
 .cat-date {
