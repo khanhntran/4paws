@@ -8,14 +8,14 @@
 
 .cat-grid a {
   text-decoration: none;
-  color: white;
+  color: $fourpaws-blue;
 }
 
 .cat-grid__item {
   padding: 1rem;
   text-decoration: none;
   min-width: 22rem;
-  background: $fourpaws-blue;
+  background: white;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
