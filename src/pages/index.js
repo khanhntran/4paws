@@ -1,8 +1,7 @@
 import React from 'react';
 import IndexLayout from '../components/IndexLayout';
-import { Link, graphql } from 'gatsby';
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <IndexLayout>
     <h1 className="h1--index">Planning to Adopt a Cat?</h1>
     <p>

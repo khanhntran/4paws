@@ -52,6 +52,35 @@
 
     .nav-container-narrow {
       display: block;
+
+      .title-mobile,
+      .title-mobile .fa {
+        font-size: 8.2vw;
+      }
     }
+  }
+
+  .cat-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .cat-pic-container {
+    min-height: 22rem;
+    position: relative;
+  }
+
+  .cat-pic {
+    width: 22rem;
+
+    display: block;
+    margin: 0 auto;
+
+    position: absolute;
+    clip: rect(0rem, 22rem, 22rem, 0rem);
+
+    left: 0;
+    right: 0;
+
+    border-radius: 5px;
   }
 }

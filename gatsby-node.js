@@ -28,7 +28,10 @@ exports.createPages = ({ actions, graphql }) => {
     res.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: `adoptable-cats/${node.frontmatter.title}`,
-        component: postTemplate
+        component: postTemplate,
+        context: {
+          title: node.frontmatter.title
+        }
       });
     });
   });
