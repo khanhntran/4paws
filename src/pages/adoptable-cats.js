@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import { Link, graphql } from 'gatsby';
+import moment from 'moment';
 //import Img from 'gatsby-image';
 
 const AdoptableCatsPage = ({ data }) => (
@@ -37,7 +38,10 @@ const AdoptableCatsPage = ({ data }) => (
                 {cat.node.frontmatter.shortDesc}
               </div>
               <div className="cat-date">
-                Posted on <strong>{cat.node.frontmatter.date}</strong>
+                Posted on{' '}
+                <strong>
+                  {moment(cat.node.frontmatter.date).format("MMM Do 'YY")}
+                </strong>
               </div>
             </div>
           </Link>

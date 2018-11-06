@@ -1,6 +1,6 @@
 ---
 title: Lucy
-date: Oct 29th 2018
+date: 2017 01 02
 shortDesc: A Gorgeous Calico Girl Looking for a New Home!
 picture: /assets/lucy.jpg
 tags:
