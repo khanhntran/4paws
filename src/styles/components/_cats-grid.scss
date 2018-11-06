@@ -1,19 +1,23 @@
 .cat-grid {
   display: grid;
   grid-column-gap: $s-size;
+  grid-row-gap: $s-size;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: $xl-size;
 }
 
 .cat-grid a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .cat-grid__item {
-  border: 2px grey solid;
   padding: 1rem;
   text-decoration: none;
+  min-width: 22rem;
+  background: $fourpaws-blue;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .cat-name {
@@ -38,8 +42,16 @@
 
   left: 0;
   right: 0;
+
+  border-radius: 5px;
+}
+
+.cat-short-desc {
+  font-size: $font-size-medium;
+  text-align: center;
 }
 
 .cat-date {
-  text-decoration: none;
+  font-size: 1.1rem;
+  text-align: center;
 }
